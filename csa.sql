@@ -573,7 +573,7 @@ INSERT INTO `enseignant` (`NO_ENSEIGNANT`, `TYPE`, `SEXE`, `NOM`, `PRENOM`, `ADR
 CREATE TABLE `entreprise` (
   `NO_ENTREPRISE` double NOT NULL,
   `REFERENCEE` char(1) DEFAULT 'N',
-  `DATE_REFERENCEMENT` datetime DEFAULT NULL COMMENT 'Date de rיfיrencement de l''entreprise',
+  `DATE_REFERENCEMENT` datetime DEFAULT NULL COMMENT 'Date de référencement de l''entreprise',
   `LOGIN_CREA` varchar(8) DEFAULT NULL COMMENT 'NE PAS UTILISER = RESIDU SIGILI',
   `DATE_CREA` datetime NOT NULL,
   `NOM` varchar(100) NOT NULL,
@@ -584,13 +584,14 @@ CREATE TABLE `entreprise` (
   `VILLE` varchar(100) NOT NULL,
   `PAYS` varchar(100) NOT NULL,
   `TEL` varchar(20) NOT NULL,
-  `SITE_INTERNET` varchar(150) DEFAULT NULL COMMENT 'Adresse web su site de l''entreprise',
-  `NOM_REPRESENTANT` varchar(50) DEFAULT NULL COMMENT 'Nom du reprיsentant',
-  `PRENOM_REPRESENTANT` varchar(50) DEFAULT NULL COMMENT 'Prיnom du reprיsentant',
+  `SITE_INTERNET` varchar(150) DEFAULT NULL COMMENT 'Adresse web sur site de l''entreprise',
+  `NOM_REPRESENTANT` varchar(50) DEFAULT NULL COMMENT 'Nom du représentant',
+  `PRENOM_REPRESENTANT` varchar(50) DEFAULT NULL COMMENT 'Prénom du représentant',
   `LOGIN_MAJ` varchar(8) DEFAULT NULL COMMENT 'NE PAS UTILISER = RESIDU SIGILI',
-  `DATE_MAJ` datetime DEFAULT sysdate() COMMENT 'Date de mise א jour des donnיes',
-  `OFFRE_STAGE` char(1) DEFAULT 'N' COMMENT 'Reprיsente une valeur boolיen Oui ou Non'
-) ;
+  `DATE_MAJ` datetime DEFAULT current_timestamp COMMENT 'Date de mise à jour des données',
+  `OFFRE_STAGE` char(1) DEFAULT 'N' COMMENT 'Représente une valeur booléenne Oui ou Non'
+);
+
 
 --
 -- Dumping data for table `entreprise`
